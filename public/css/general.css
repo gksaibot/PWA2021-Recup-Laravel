@@ -1,0 +1,89 @@
+/* --- Estilo aplicado a todas las páginas del proyecto --- */
+
+/*      Fuentes de Google:      */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body {
+    background:lightblue url(../img/fondoOficina.jpg) fixed center;
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif', serif;
+}
+
+#cuerpo {
+    background: rgba(233, 236, 239, 0.8);
+}
+#pie {
+    background: rgba(23, 162, 184, 0.5);
+    text-shadow: 2px 2px 8px #000;
+}
+
+/* Estilo para verificaciones */
+.has-error, .has-error .help-block {
+    color: darkred;
+}
+.has-success, .has-success .help-block {
+    color: darkgreen;
+}
+/* Más estilos de plugin bootstrapValidator */
+.bv-form .help-block {
+    margin-bottom: 0;
+}
+.bv-form .tooltip-inner {
+    text-align: left;
+}
+.nav-tabs li.bv-tab-success > a {
+    color: #3c763d;
+}
+.nav-tabs li.bv-tab-error > a {
+    color: #a94442;
+}
+.bv-form .bv-icon-no-label {
+	top: 0;
+}
+.bv-form .bv-icon-input-group {
+	top: 0;
+	z-index: 100;
+}
+
+/* Estilo para hacer funcionar botón, ver volverArriba.js */
+#volverArriba {
+    display: none; /* Oculto por defecto */
+    cursor: default; /* Evita que se marque con manito */
+    border: none; /* Sin bordes, reemplaza estilo de bootstrap */
+    /* Ajustes para fijar en esquina inferior derecha, encima del contenido: */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+}
+#volverArriba:hover {
+    background-color: #333; /* Pone fondo oscuro al pasar el cursor */
+}
+
+/* Aplicar animación fácil de zoom al pasar cursor: https://code-boxx.com/image-zoom-css-javascript/ */
+.zoom {
+    transition: transform ease-in-out 0.3s;
+}
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+/* Recortar y centrar miniaturas: https://jonathannicol.com/blog/2014/06/16/centre-crop-thumbnails-with-css/ */
+.miniatura {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+}
+.miniatura img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
